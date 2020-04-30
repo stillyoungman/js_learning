@@ -1,14 +1,13 @@
 // put your code in solution constant
 const solution = (array) => {
-    
-    let newArray = array.filter((value) => +value);
-    let newValue = 0;   
 
-    for(let i = 0; i < newArray.length; i++) {
-        newValue += newArray[i]*2;
-    }
+    array = array.filter((value) => +value).map((value) => +value);
 
-    return newValue;
+    if(array.length > 1) {
+        array = array.reduce((a, b) => a + b);
+    } 
+
+    return array * 2;
 };
 
 module.exports = solution;
