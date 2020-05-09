@@ -5,7 +5,8 @@
   "main": "./express/server",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha",
-    "start": "nodemon --legacy-watch ./express/server"
+    "restart": "nodemon --legacy-watch express/server.js",
+    "start": "node express/server.js"
   },
   "author": "Constatnine Nikolsky",
   "license": "ISC",

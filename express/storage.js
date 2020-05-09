@@ -21,9 +21,10 @@ function storage(){
     }, 
 
     update: (id, body) => {
-      let book = library.indexOf( library.find( (book) => book.id === Number(id) ) );
-      library.book.title = body.title;
-      library.book.author = body.author;
+      let book = library.find( (book) => book.id === Number(id) );
+      book.title = body.title;
+      book.author = body.author;
+            
       return book;
     },
 
